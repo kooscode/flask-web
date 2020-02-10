@@ -1,0 +1,17 @@
+#To enable at boot: sudo systemctl enable piweb.service
+#To restart system daemon run: sudo systemctl daemon-reload 
+#To restart service run: sudo systemctl restart piweb.service
+
+[Unit]
+Description=pi web application
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/wwwroot
+ExecStart=/wwwroot/piweb.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

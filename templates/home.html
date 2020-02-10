@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<table>
+    <tr>
+        <td colspan="3"  align="center">
+            <strong>STATUS</strong>
+            <hr/>
+        </td>
+    </tr>
+    <tr>
+        <td>CABLE:</td>
+        <td><img src="static/img/{{ status_P1 }}.jpg" width="22px" height="22px" /></td>
+        <td>
+            <form name="p1" action="/toggle" method="post">
+            <input name="p" value=1 type="hidden" />            
+            <input value="ON/OFF" type="submit"/>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>ROUTER:</td>
+        <td><img src="static/img/{{ status_P2 }}.jpg"  width="22px" height="22px" /></td>
+        <td>
+            <form name="p2" action="/toggle" method="post">
+            <input name="p" value=2 type="hidden" />            
+            <input value="ON/OFF" type="submit"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center">
+            <hr/>
+            <form action="/bounce" method="post">
+                <input value="BOUNCE ALL" type="submit" />
+            </form>
+            </td>
+    </tr>
+</table>
+{% endblock content %}
