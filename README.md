@@ -10,4 +10,4 @@ remote enable/disable of my modem and router.
 ** Adjust script paths in .service file \
 ** Install the .service file in /etc/system.d/system/ \
 ** set permissions on .service file as 644 \
-** follow directions in .service file to enable/start/etc. \
+** follow directions in .service file to enable/start/etc. 
